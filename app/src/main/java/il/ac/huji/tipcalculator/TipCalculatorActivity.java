@@ -6,8 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,40 +19,36 @@ public class TipCalculatorActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip_calculator);
 
+        // Gets bill amount object
         final EditText billAmount = (EditText) findViewById(R.id.billAmount);
-        billAmount.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-            }
-
-        });
-
-
+        // Gets calculate button object
         final Button button = (Button) findViewById(R.id.btnCalculate);
+
+        // Waits for the click to read the bill amount
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+                // Reads the bill amount
                 CharSequence s = billAmount.getText();
-                                TextView tipBill = (TextView) findViewById(R.id.tipBill);
+
+                // Gets the tip text box object
+                TextView tipBill = (TextView) findViewById(R.id.tipBill);
+
                 if (s.length()>0) {
                     double number = Double.parseDouble(s.toString());
+
+                    // Gets the check box value
                     boolean isChecked = ((CheckBox) findViewById(R.id.chkRound)).isChecked();
                     double rounded;
+
+
                     if (isChecked) {
                         rounded = Math.round(number * 0.12);
                     }
                         else {
                         rounded = (double) Math.round(number * 0.12 * 100) / 100;
                     }
-//                    String cs = "jj"
+                    // Sets the tip amount
                     tipBill.setText(Double.toString(rounded));
                 }
             }
