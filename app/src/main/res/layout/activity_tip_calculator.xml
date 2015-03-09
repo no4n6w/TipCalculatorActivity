@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:editable="false"
+        android:text="Bill Amount (in USD)" />
+
+    <EditText
+        android:layout_width="238dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/billAmount"
+        android:inputType="number|numberDecimal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round to nearest dollar"
+        android:id="@+id/chkRound"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/btnCalculate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:editable="false"
+        android:text="Tip (in USD) - 12%" />
+
+    <EditText
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipBill"
+        android:inputType="number|numberDecimal"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:editable="false"
+        android:text="Total Amount" />
+
+    <EditText
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:id="@+id/totalAmount"
+        android:inputType="number|numberDecimal"/>
+
+    <!--<Button-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:text="@string/send" />-->
+</LinearLayout>
