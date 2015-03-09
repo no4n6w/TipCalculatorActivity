@@ -6,16 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
-import android.app.Activity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.Math;
-import java.math.RoundingMode;
-import java.lang.String;
 
 
 public class TipCalculatorActivity extends ActionBarActivity {
@@ -38,16 +34,6 @@ public class TipCalculatorActivity extends ActionBarActivity {
 
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
-
-//                TextView tipBill = (TextView) findViewById(R.id.tipBill);
-//                if (s.length()>0) {
-//                    double number = Double.parseDouble(s.toString());
-//                    double rounded = Math.ceil(number*0.12);
-////                    String cs = "jj"
-//                    tipBill.setText(Double.toString(rounded));
-//                    TextView totalAmount = (TextView) findViewById(R.id.totalAmount);
-//                    totalAmount.setText(Double.toString(number+rounded));
-//                }
             }
 
         });
@@ -70,8 +56,6 @@ public class TipCalculatorActivity extends ActionBarActivity {
                     }
 //                    String cs = "jj"
                     tipBill.setText(Double.toString(rounded));
-                    TextView totalAmount = (TextView) findViewById(R.id.totalAmount);
-                    totalAmount.setText(Double.toString(number+rounded));
                 }
             }
         });
